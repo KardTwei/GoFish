@@ -28,9 +28,22 @@ public:
 
     Deck();           // pristine, sorted deck
 
+    /*
+    * Pre: Deck has been properly constructed
+    * Post: Randomly swaps pairs of cards resulting in a shuffled deck
+    */
     void shuffle();   // shuffle the deck, all 52 cards present
+
+    /*
+    * Pre: Deck still has cards left and was properly constructed
+    * Post: Returns card from deck at myIndex, and increments the myIndex
+    */
     Card dealCard();   // get a card, after 52 are dealt, fail
 
+    /*
+    * Pre: Deck properly constructed with SIZE amount of cards
+    * Post: Returns remaining size of deck as an int
+    */
     int  size() const; // # cards left in the deck
 
 private:

@@ -3,14 +3,15 @@
 //
 #include "deck.h"
 #include <time.h>
+#include <cstdlib>
 
-Deck::Deck(){
+Deck::Deck() {
     int deckIndex = 0;      //deckIndex is used solely within Deck constructor
     myIndex = 0;        //myIndex is used when dealing cards out
+
     //Assume a new deck is ordered with Ace spades, Ace hearts, Ace diamonds, Ace clubs, 2 spades...
-    //Only printing ace of spades???
     srand(time(0));
-    for (int i = 1; i < 14; i++){
+    for (int i = 1; i < 14; i++) {
         myCards[deckIndex] = Card(i, Card::spades);
         deckIndex++;
         myCards[deckIndex] = Card(i, Card::hearts);
@@ -20,15 +21,7 @@ Deck::Deck(){
         myCards[deckIndex] = Card(i, Card::clubs);
         deckIndex++;
     }
-
-    /*
-    //Debugging
-    for (int i = 0; i < 52; i++) {
-        cout << myCards[i] << endl;
-    }
-     */
-}      // pristine, sorted deck
-
+}
 
 void Deck::shuffle(){
 
@@ -42,12 +35,6 @@ void Deck::shuffle(){
         myCards[index2] = temp;
     }
 
-    /*
-    //Debugging
-    for (int i = 0; i < 52; i++) {
-        cout << myCards[i] << endl;
-    }
-     */
 }   // shuffle the deck, all 52 cards present
 
 
@@ -59,7 +46,7 @@ Card Deck::dealCard(){
         return(returnCard);
     }
     else{
-        return(Card(0, Card::spades));      //What do we return here???
+        return(Card(0, Card::spades));
     }
 }   // get a card, after 52 are dealt, fail
 

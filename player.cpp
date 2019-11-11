@@ -11,7 +11,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <time.h>
+#include <ctime>
+#include <cstdlib>
 
 #include "card.h"
 #include "deck.h"
@@ -92,7 +93,7 @@ Card Player::removeCardFromHand(Card c){
             return tempReturn;
         }
     }
-    return tempReturn;              //NOT SURE WHAT TO DO HERE?!??!?!?!?!FAJK
+    return tempReturn;
 }
 
 

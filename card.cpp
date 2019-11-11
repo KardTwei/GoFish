@@ -51,7 +51,7 @@ string Card::toString() const{               // return string version e.g. Ac 4h
 }
 
 
-//bool Card::sameSuitAs(const Card& c) const{}  // true if suit same as c
+
 int  Card::getRank()                 const{
     return(myRank);
 } // return rank, 1..13
