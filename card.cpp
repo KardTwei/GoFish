@@ -92,14 +92,14 @@ string Card::rankString(int r)       const{
 
 
 bool Card::operator == (const Card& rhs) const{
-    if (myRank == rhs.myRank){
+    if (myRank == rhs.myRank && mySuit == rhs.mySuit){
         return true;
     }
     else
         return false;
  }
 bool Card::operator != (const Card& rhs) const{
-    if (myRank != rhs.myRank){
+    if (myRank != rhs.myRank && mySuit != rhs.mySuit){
         return true;
     }
     else
